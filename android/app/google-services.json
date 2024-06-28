@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "529111039511",
+    "project_id": "hr-app-5f9b6",
+    "storage_bucket": "hr-app-5f9b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529111039511:android:f9a1ed66e7e1262ebf6652",
+        "android_client_info": {
+          "package_name": "com.example.hr_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZHuRMXdDdkuzvAnpgII7ts-FjFnKtYOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
