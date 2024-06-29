@@ -19,11 +19,9 @@ Widget _buildIntroTexts () {
         Text(
           'Verify your phone number ',
           style: TextStyle(
-              color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        SizedBox(
-          height: 10,
-        ),
+ 
         Container(
           margin: EdgeInsets.symmetric(horizontal: 2),
           child: RichText(
@@ -77,8 +75,8 @@ child: PinCodeTextField(
   pinTheme: PinTheme(
     shape: PinCodeFieldShape.box,
     borderRadius: BorderRadius.circular(5),
-    fieldHeight: 50,
-    fieldWidth: 40,
+    fieldHeight: 40,
+    fieldWidth: 30,
     borderWidth: 1,
     activeColor: MyColors.blue,
     inactiveColor: MyColors.blue,
@@ -115,10 +113,10 @@ Widget _buildVerifyButton (BuildContext context) {
     },
     child: Text(
       'Verify',
-      style: TextStyle(color: Colors.white , fontSize: 16,),
+      style: TextStyle(color: Colors.white , fontSize: 12,),
     ),
     style: ElevatedButton.styleFrom(
-      minimumSize: Size(110, 50),
+      minimumSize: Size(80, 50),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6),),
       backgroundColor: Colors.black,
       
@@ -160,7 +158,7 @@ _buildPhoneVerificationBloc(){
     Scaffold(
       backgroundColor: Colors.white,
       body:Container(
-        margin: EdgeInsets.symmetric(horizontal: 32 , vertical: 88),
+        margin: EdgeInsets.symmetric(horizontal: 32 , vertical: 35),
         child: Column(
           children: [
             _buildIntroTexts(),

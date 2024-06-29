@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
         Text(
           'What is your your phone number ? ',
           style: TextStyle(
-              color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+              color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
         ),
         SizedBox(
           height: 10,
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 2),
           child: Text(
             'Please enter your phone number to verify your account',
-            style: TextStyle(color: Colors.black, fontSize: 18),
+            style: TextStyle(color: Colors.black, fontSize: 14),
           ),
         ),
       ],
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
         Expanded(
           flex: 1,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
             decoration: BoxDecoration(
               border: Border.all(color: MyColors.lightGrey),
               borderRadius: BorderRadius.all(Radius.circular(6)),
@@ -57,19 +57,19 @@ class LoginScreen extends StatelessWidget {
           flex: 2,
           child: Container(
             width: double.infinity,
-            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
             decoration: BoxDecoration(
               border: Border.all(color: MyColors.blue),
               borderRadius: BorderRadius.all(Radius.circular(6)),
             ),
-            child: TextFormField(autofocus: true, style: TextStyle(fontSize: 18 , letterSpacing: 2.0), 
+            child: TextFormField(autofocus: true, style: TextStyle(fontSize: 14 , letterSpacing: 2.0), 
             decoration: InputDecoration(
               border: InputBorder.none),
               cursorColor: Colors.black,
               keyboardType: TextInputType.phone,
               validator: (value) {
                 if(value!.isEmpty){
-                  return'Please enter your number';
+                  return'Please enter your number ' ;
                 }else if (value.length < 11){
                   return'To short for a phone number';
                 }
@@ -116,7 +116,7 @@ String generateCountryFlag() {
     },
     child: Text(
       'Next',
-      style: TextStyle(color: Colors.white , fontSize: 16,),
+      style: TextStyle(color: Colors.white , fontSize: 10,),
     ),
     style: ElevatedButton.styleFrom(
       minimumSize: Size(110, 50),
@@ -182,7 +182,7 @@ Widget _builPhoneNumberSubmittedBloc () {
         body: Form(
           key: _phoneFormKey,
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 32, vertical: 88),
+            margin: EdgeInsets.symmetric(horizontal: 32, vertical: 45),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

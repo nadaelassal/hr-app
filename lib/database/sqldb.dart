@@ -13,35 +13,37 @@ class SqlDb {
   }
  initialDb()async{
     String databasePath = await getDatabasesPath();
-    String path = join(databasePath , 'work.db');
-    Database mydb = await openDatabase( path , onCreate: _onCreate , version: 4);
+    String path = join(databasePath , 'test.db');
+    Database mydb = await openDatabase( path , onCreate: _onCreate , version: 1);
+    
 
     return mydb ;
   }
   _onCreate(Database db , int version)async{
-    await db.execute('''
-     CREATE TABLE "data"(
-     "phone_number" TEXT NOT NULL ,
-     "name" TEXT NOT NULL,
-     "vacation" TEXT NOT NULL
-     )
-''');
- 
-}
-mydeleteDatabase()async{
-   String databasePath = await getDatabasesPath();
-    String path = join(databasePath , 'work.db');
-    deleteDatabase(path);
+    await db.execute('CREATE TABLE Test (id INTEGER PRIMARY KEY, name TEXT, phone_number TEXT, vacation TEXT)');
+print("database Created-----------------------------------------------------");
+
 }
  readData(String sql) async {
     Database? mydb = await db ;
-    int response = await mydb!.rawInsert(sql);
-    return response ;
+    List<Map> response= await mydb!.rawQuery(sql);
+    print(response);
+    return response;
   }
     insertData(String sql) async {
     Database? mydb = await db ;
     int response = await mydb!.rawInsert(sql);
-    print (response) ;
+    print(response);
+    return response;
   }
-}
+
+  mydeleteData()async{
+      String databasePath = await getDatabasesPath();
+    String path = join(databasePath , 'test.db');
+    deleteDatabase(path);
+  }
+  }
+  
+  
+
   

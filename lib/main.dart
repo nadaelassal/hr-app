@@ -43,8 +43,6 @@ final AppRouter appRouter ;
       ),
       onGenerateRoute: appRouter.generateRoute,
       initialRoute: initialRoute ,
-     
-     
     );
   }
 }
